@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="272" viewBox="0 0 960 272" role="img" aria-labelledby="title desc">
+  <title id="title">Hello, world! I'm lmtyy.</title>
+  <desc id="desc">A pixel-art night sky behind a little coding desk. A ginger cat is curled up on a cream-colored computer with a blinking mint cursor.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#16192f"/>
+      <stop offset=".58" stop-color="#292848"/>
+      <stop offset="1" stop-color="#514066"/>
+    </linearGradient>
+    <pattern id="screen-lines" width="4" height="5" patternUnits="userSpaceOnUse">
+      <path d="M0 4.5h4" stroke="#9bf2ca" opacity=".1"/>
+    </pattern>
+    <path id="spark" d="M4 0h2v4h4v2H6v4H4V6H0V4h4z"/>
+    <g id="name">
+      <path id="letter-l" d="M0 0h12v36h6v6H0v-6h6V6H0z"/>
+      <path d="M24 12h12v6h6v-6h12v6h6v24h-6V24h-6v18h-6V24h-6v18h-6V18h-6z"/>
+      <path d="M72 0h6v12h12v6H78v18h12v6H78v-6h-6V18h-6v-6h6z"/>
+      <path id="letter-y" d="M96 12h6v18h12V12h6v30h-6v6H96v-6h12v-6h-6v-6h-6z"/>
+      <use xlink:href="#letter-y" x="30"/>
+    </g>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        .cursor { animation: blink 1.6s step-end infinite; }
+        .distant-stars { animation: glow 5s ease-in-out infinite alternate; }
+      }
+      @keyframes blink { 0%, 100% { opacity: 1; } 65% { opacity: 0; } }
+      @keyframes glow { from { opacity: .45; } to { opacity: .95; } }
+    </style>
+  </defs>
+  <rect width="960" height="272" fill="url(#sky)"/>
+  <g shape-rendering="crispEdges">
+    <!-- Stars and a stepped crescent. -->
+    <path fill="#aa9cba" d="M23 27h2v2h-2zM97 38h3v3h-3zM164 19h2v2h-2zM231 50h2v2h-2zM299 24h3v3h-3zM374 53h2v2h-2zM435 27h2v2h-2zM467 103h3v3h-3zM525 63h2v2h-2zM552 124h2v2h-2zM625 17h3v3h-3zM650 65h2v2h-2zM728 29h3v3h-3zM808 22h2v2h-2zM894 110h2v2h-2zM927 28h2v2h-2z"/>
+    <g fill="#f1c9a4" class="distant-stars">
+      <use xlink:href="#spark" x="411" y="66"/>
+      <use xlink:href="#spark" x="572" y="28"/>
+      <use xlink:href="#spark" x="877" y="75"/>
+      <path d="M40 123h3v3h-3zM330 68h3v3h-3zM499 22h3v3h-3zM608 105h3v3h-3zM935 127h3v3h-3z"/>
+    </g>
+    <path fill="#ffe4ae" d="M850 20h9v5h-6v6h-4v13h4v5h6v4h12v-3h6v-5h4v10h-5v5h-8v3h-17v-4h-8v-6h-4v-8h-3V32h4v-6h6v-4h4z"/>
+
+    <!-- Distant skyline, with a few lit windows above the desk. -->
+    <path fill="#423854" d="M0 243h32v-6h32v-9h48v10h44v-5h38v9h55v-7h50v-13h33v7h37v-14h42v-12h30v9h20v-21h24v-12h28v10h26v-21h30v-11h22v9h36v-14h42v26h31v-8h34v11h66v8h61v-27h34v-16h22v12h30v-8h28v-14h30v127H0z"/>
+    <path fill="#302b46" d="M0 251h56v-7h34v6h84v-5h41v7h65v-8h52v-9h33v6h50v-13h27v-7h29v9h33v-24h17v-18h3v18h18v12h28v-33h35v-12h21v28h34v2h80v22h101v-20h34v-12h17v-5h7v5h11v16h16v-24h22v-6h20v14h16v81H0z"/>
+    <path fill="#c7908e" opacity=".7" d="M518 213h4v3h-4zM531 213h4v3h-4zM579 191h5v3h-5zM589 191h5v3h-5zM589 202h5v3h-5zM879 195h4v3h-4zM926 184h5v3h-5zM917 195h5v3h-5z"/>
+
+    <!-- Two-color pixel lettering stays sharp without a web font. -->
+    <use xlink:href="#name" transform="translate(65 95) scale(2)" fill="#9179ae"/>
+    <use xlink:href="#name" transform="translate(61 89) scale(2)" fill="#fff1d6"/>
+    <path d="M62 61l6 5-6 5" fill="none" stroke="#86dec2" stroke-width="3"/>
+    <text x="80" y="72" fill="#9ce9d1" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20">hello, world!</text>
+
+    <!-- Desktop, CRT case and glass. -->
+    <path fill="#171827" d="M564 241h396v31H550v-25h14z"/>
+    <path fill="#d3988c" d="M564 239h396v5H564z"/>
+    <path fill="#79596b" d="M552 244h408v6H552z"/>
+    <path fill="#af817c" d="M572 244h77v2h-77zM880 245h65v2h-65z"/>
+    <path fill="#171827" d="M638 80h136v4h8v7h6v98h-5v9h-8v5h-39v7h13v7h-75v-7h14v-7h-46v-5h-8v-10h-4V93h4v-9h4z"/>
+    <path fill="#967f85" d="M641 84h129v4h9v8h5v89h-5v10h-8v5H644v-5h-8v-9h-3V96h4v-8h4z"/>
+    <path fill="#e3bca2" d="M641 84h120v4h8v7h4v87h-4v10h-7v5H644v-5h-7v-7h-4V96h4v-8h4z"/>
+    <path fill="#ffe4bd" d="M642 85h116v4H643v4h-4v80h-3V94h3v-6h3z"/>
+    <path fill="#ad9092" d="M647 98h106v4h7v7h3v61h-4v8h-7v3H650v-4h-7v-7h-3v-60h3v-8h4z"/>
+    <path fill="#172e38" d="M650 103h101v4h6v7h3v53h-4v7h-6v3h-98v-3h-6v-7h-3v-52h3v-8h4z"/>
+    <path fill="#25474b" d="M651 108h98v3h5v7h2v45h-3v7h-6v3h-94v-3h-5v-7h-2v-44h2v-8h3z"/>
+    <path fill="url(#screen-lines)" d="M650 115h102v51H650z"/>
+    <path fill="#b0f1cd" d="M659 125h4v4h5v4h4v4h-4v4h-5v4h-4v-5h4v-4h4v-2h-4v-4h-4z"/>
+    <path class="cursor" fill="#b0f1cd" d="M678 141h15v5h-15z"/>
+    <path fill="#bea098" d="M647 184h31v3h-31zM647 189h22v2h-22z"/>
+    <path fill="#66c3a7" d="M749 185h8v4h-8z"/>
+    <path fill="#b0938d" d="M694 200h36v10h-36zM680 211h63v5h-63z"/>
+
+    <!-- Ginger cat asleep on top of the monitor. -->
+    <path fill="#4e404d" d="M662 81v-9h5V62h7v-6h12v-4h17v4h10v-9h5l8 8h7l7-8h5v15h3v10h-4v6h-8v6h-67v-3z"/>
+    <path fill="#e9a16f" d="M666 79v-7h5v-8h6v-5h10v-4h15v4h10v10h5v9h-14v3h-31v-2z"/>
+    <path fill="#efaf79" d="M716 53l8 7h12l6-7v12h4v7h-4v5h-7v3h-14v-4h-5v-7h-3v-9h3z"/>
+    <path fill="#bb7661" d="M680 61h4v9h-4zM687 58h4v8h-4zM724 60h3v5h-3zM731 60h3v5h-3z"/>
+    <path fill="#ffe0ab" d="M717 73h5v3h15v3h-4v2h-12v-4h-4z"/>
+    <path fill="#513d48" d="M721 68h5v2h-5zM735 68h5v2h-5zM729 72h3v2h-3z"/>
+    <path fill="#f5b780" d="M673 74h24v4h-20v3h-14v-3h10z"/>
+
+    <!-- Keyboard and coffee mug. -->
+    <path fill="#171827" d="M652 217h97l12 15v7H635v-7z"/>
+    <path fill="#e8c5a9" d="M653 218h94l10 13H641z"/>
+    <path fill="#a88a89" d="M641 231h116v5H641z"/>
+    <path fill="#977e83" d="M655 221h9v2h-9zM667 221h9v2h-9zM679 221h9v2h-9zM691 221h9v2h-9zM703 221h9v2h-9zM715 221h9v2h-9zM727 221h14v2h-14zM651 226h12v2h-12zM666 226h8v2h-8zM677 226h40v2h-40zM720 226h10v2h-10zM733 226h12v2h-12z"/>
+    <path fill="#171827" d="M806 205h33v5h11v4h3v13h-6v5h-11v5h-4v2h-21v-4h-5z"/>
+    <path fill="#8fc5b6" d="M808 206h29v5h10v4h4v9h-4v6h-12v4h-5v3h-17v-4h-5z"/>
+    <path fill="#302b46" d="M837 216h8v7h-3v3h-6z"/>
+    <path fill="#ceebca" d="M809 205h26v3h-26zM811 210h4v17h-4z"/>
+    <path fill="#a699ac" d="M815 198v-7h4v-6h-4v-7h2v6h5v8h-4v6z" opacity=".72"/>
+  </g>
+</svg>
