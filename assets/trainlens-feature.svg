@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="200" viewBox="0 0 900 200" role="img" aria-labelledby="title desc">
+  <title id="title">TrainLens — see where a training run went wrong.</title>
+  <desc id="desc">In the SFT demo, the gradient norm is 142.7 at step 200, followed by a NaN loss at step 250. An engraved glass lens focuses parallel rays into a point.</desc>
+  <defs>
+    <clipPath id="frame"><rect x="0.75" y="0.75" width="898.5" height="198.5" rx="12"/></clipPath>
+    <linearGradient id="field" x2=".95" y2=".85">
+      <stop stop-color="#101c27"/>
+      <stop offset=".45" stop-color="#18252d"/>
+      <stop offset="1" stop-color="#111722"/>
+    </linearGradient>
+    <radialGradient id="lamp">
+      <stop stop-color="#50887e" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#14212c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x2="1" y2=".85">
+      <stop stop-color="#ba9d73"/>
+      <stop offset=".3" stop-color="#52646a"/>
+      <stop offset=".73" stop-color="#4f4b4b"/>
+      <stop offset="1" stop-color="#a07c50"/>
+    </linearGradient>
+    <linearGradient id="glass">
+      <stop stop-color="#355955"/>
+      <stop offset=".33" stop-color="#2c5353"/>
+      <stop offset=".62" stop-color="#75b5a8"/>
+      <stop offset=".72" stop-color="#477576"/>
+      <stop offset="1" stop-color="#2b4d54"/>
+    </linearGradient>
+    <linearGradient id="ray" gradientUnits="userSpaceOnUse" x1="-80" x2="60">
+      <stop stop-color="#b9dfcf" stop-opacity=".14"/>
+      <stop offset=".38" stop-color="#c8f0d7" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#f4c688" stop-opacity=".96"/>
+    </linearGradient>
+    <linearGradient id="interval" gradientUnits="userSpaceOnUse" x1="534" x2="735">
+      <stop stop-color="#79b3a5"/>
+      <stop offset="1" stop-color="#ca9d6d"/>
+    </linearGradient>
+    <pattern id="grain" width="17" height="13" patternUnits="userSpaceOnUse">
+      <path d="M3 3h1m8 6h.7" stroke="#b4bab4" stroke-width=".6" opacity=".2"/>
+    </pattern>
+    <g id="optic">
+      <!-- The engraved meridian and its brass graduations sit behind the glass. -->
+      <g fill="none" stroke="#be9b68">
+        <path d="M-42-53C-15-70 16-69 42-56M-39 58C-15 72 13 73 39 61" opacity=".66"/>
+        <path d="M-29-60l1.6 4M-16-65l.9 4M-3-67v5M10-66l-.6 3.8M23-63l-1 3.8M35-59l-1.8 3.5M-24 65l1-3.5M-10 69l.5-4M4 70v-5M17 68.7l-.6-3.4M30 65l-1.1-3" opacity=".82"/>
+      </g>
+      <path d="M-70-23L-6-23 59 0-6 23H-70z" fill="#a7d9be" opacity=".045"/>
+      <g fill="none" stroke="url(#ray)" stroke-width="1.2">
+        <path d="M-78-23h73L59 0"/>
+        <path d="M-78-12h73L59 0"/>
+        <path d="M-80 0H73"/>
+        <path d="M-78 12h73L59 0M-78 23h73L59 0"/>
+      </g>
+      <path d="M-9-51C7-43 15-23 15 1S7 44-6 51C-18 39-23 20-23 0S-17-39-9-51z" fill="url(#glass)" stroke="#d4b381" stroke-width="1.4"/>
+      <g fill="none">
+        <path d="M-9-50C3-25 4 23-6 50" stroke="#e0cfab" opacity=".9"/>
+        <path d="M-8-47C-19-21-19 20-7 46M-6-47C8-23 9 23-4 46" stroke="#b6d9c1" opacity=".53"/>
+        <path d="M-14-36C-1-32 7-29 10-24M-19-22C-9-18 9-15 13-12M-22-5C-6 2 5 2 14 1M-20 11C-4 17 6 17 13 15M-16 28C-6 32 2 34 8 32" stroke="#badccc" stroke-width=".8" opacity=".48"/>
+        <path d="M59-6v12m-6-6h12" stroke="#f2d09d" stroke-width="1.2"/>
+      </g>
+      <circle cx="59" cy="0" r="2.3" fill="#f9d291"/>
+    </g>
+    <style>
+      .title { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; fill: #fff1d5; }
+      .prose, .metric { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
+      .prose { fill: #d5ded7; }
+      .metric { fill: #d7e0d9; }
+      .step { font-family: Menlo, Consolas, monospace; font-weight: 600; fill: #c8d1c8; letter-spacing: .55px; }
+      .value { font-family: Georgia, 'Times New Roman', serif; font-variant-numeric: lining-nums; }
+      @media (prefers-reduced-motion: no-preference) {
+        .focus-light { animation: glimmer 6.8s ease-in-out infinite alternate; }
+      }
+      @keyframes glimmer { from { opacity: .32; } to { opacity: .83; } }
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="900" height="200" fill="url(#field)"/>
+    <rect width="900" height="200" fill="url(#grain)"/>
+    <ellipse cx="417" cy="105" rx="145.8" ry="128.52" fill="url(#lamp)"/>
+    <g transform="translate(417 105) rotate(-18) scale(1.08)">
+      <use xlink:href="#optic"/>
+      <circle class="focus-light" cx="59" r="5" fill="none" stroke="#eec583" stroke-width=".8" opacity=".65"/>
+    </g>
+    <text class="title" x="34" y="101" font-size="63" letter-spacing="-2.3">TrainLens</text>
+    <text class="prose" x="35" y="138" font-size="16.3">See where a training run went wrong.</text>
+    <text class="prose" x="533" y="45" font-size="18" font-weight="600">SFT demo</text>
+    <g class="step" font-size="13">
+      <text x="534" y="78">STEP 200</text>
+      <text x="735" y="78">STEP 250</text>
+    </g>
+    <path d="M534 94H735" stroke="url(#interval)" stroke-width="1.5" fill="none"/>
+    <g transform="translate(534 94)"><circle r="6" fill="#172b2f" stroke="#9edbc6" stroke-width="1.6"/><circle r="2" fill="#bce9d1"/></g>
+    <g transform="translate(735 94)"><path d="M0-7l7 7-7 7-7-7z" fill="#322925" stroke="#e9b979" stroke-width="1.6"/><path d="M0-2.5L2.5 0 0 2.5-2.5 0z" fill="#ffda96"/></g>
+    <g class="value" font-size="45">
+      <text x="533" y="145" fill="#b2e9d6">142.7</text>
+      <text x="733" y="145" fill="#f8c791">NaN</text>
+    </g>
+    <g class="metric" font-size="15">
+      <text x="534" y="174">Gradient norm</text>
+      <text x="735" y="174">Loss</text>
+    </g>
+  </g>
+  <rect x="0.75" y="0.75" width="898.5" height="198.5" rx="12" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
+</svg>
